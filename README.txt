@@ -52,3 +52,17 @@ Note that until now, when we have done "git status", it has told us we were in
 the master branch.
 
 git branch goodbye
+Creates a branch so that we can make our code say hello and goodbye. The branch
+will be called goodbye
+
+git checkout goodbye
+Moves us to the "goodbye branch". Can be confirmed with a git status.
+
+touch goodbye.cpp
+Make a new file while in this branch, also add a comment to hello_git.cpp to
+demonstrate a change to a file
+
+git add .
+Add everything to the stage
+
+git commit -m 'Hello and Goodbye'
