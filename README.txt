@@ -66,7 +66,6 @@ git add .
 Add everything to the stage
 
 git commit -m 'Hello and Goodbye'
-<<<<<<< HEAD
 Commit these changes to our BRANCHES
 
 git checkout master
@@ -74,5 +73,37 @@ Switches us back to the master branch. The comment we made has disappeared in
 hello_git.cpp. The file goodbye.cpp has disappeared.
 
 git merge goodbye
-=======
->>>>>>> goodbye
+As long as you haven't been making changes in the master branch before you do
+the git merge command (like updating a README...), then this command will update
+the master branch to use the files from the goodbye branch (e.g. the comment in
+hello_git.cpp now appears in
+
+####################################
+#USING GITHUB (STARTING REPOSITORY)#
+####################################
+
+Log into github.com. At York, your username is sjm630@york.ac.uk, and your
+password is 1=X1 (in the usual password notation you use). In the top right hand
+corner there is a +. Select this and choose "New repository". Fill in the
+document and create your repository. On the next page, there will be a url. For
+me: https://github.com/Status-Mirror/tutorial.git
+
+git remote
+This command lists the remote repositories we have access to. Currently, we have
+none.
+
+git remote add origin https://github.com/Status-Mirror/tutorial.git
+This will add this url as a remote location, which it will call "origin" (so
+"git remote" will now list origin).
+
+git push -u origin master
+Pushes the "master" branch to the remote location "origin"
+
+##################################
+#USING GITHUB (UPLOADING CHANGES)#
+##################################
+
+touch README.md
+GitHub likes its README files to written as .md files. The syntax can be looked
+up. For a basic one, let the first line be our header "#MY STUFF", and the next
+line can be just plain text "This is my stuff". This is the file we'll add.
