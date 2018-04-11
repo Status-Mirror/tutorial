@@ -66,6 +66,7 @@ git add .
 Add everything to the stage
 
 git commit -m 'Hello and Goodbye'
+<<<<<<< HEAD
 Commit these changes to our BRANCHES
 
 git checkout master
@@ -73,3 +74,5 @@ Switches us back to the master branch. The comment we made has disappeared in
 hello_git.cpp. The file goodbye.cpp has disappeared.
 
 git merge goodbye
+=======
+>>>>>>> goodbye
